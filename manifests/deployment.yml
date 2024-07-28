@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: apalcyberpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: apalcyberpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: apalcyberpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: apalcyberpipelinesjavascriptdocker 
+          image: apalcontainerregistry.azurecr.io/apalcyberpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
